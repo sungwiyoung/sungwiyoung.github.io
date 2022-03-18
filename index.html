@@ -11,6 +11,132 @@
 <h2 id="Including-Plots"><a href="#Including-Plots" class="headerlink" title="Including Plots"></a>Including Plots</h2><p>You can also embed plots, for example:</p>
 <p><img src="/images/blog_files/figure-html/pressure-1.png"><!-- --></p>
 <p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-03-18T00:00:00.000Z" title="2022. 3. 18. 오전 9:00:00">2022-03-18</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-03-18T06:02:03.623Z" title="2022. 3. 18. 오후 3:02:03">2022-03-18</time></span><span class="level-item"> gwiyoung </span><span class="level-item">7 minutes read (About 1046 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/03/18/Hexo_Blog_install/">hexo_blog_install</a></h1><div class="content"><h1 id="Hexo-Blog-만들기"><a href="#Hexo-Blog-만들기" class="headerlink" title="Hexo Blog 만들기"></a>Hexo Blog 만들기</h1><p>참고 : <a target="_blank" rel="noopener" href="https://dschloe.github.io/settings/hexo_blog/">https://dschloe.github.io/settings/hexo_blog&#x2F;</a></p>
+<ol>
+<li>먼저 <a target="_blank" rel="noopener" href="http://nodejs.org/">nodejs.org</a> 설치해준다</li>
+</ol>
+<p>링크 : <a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a>  → 16.14.1 LTS 로 설치</p>
+<p><img src="/images/Hexo_Blog_install/Untitled.png" alt="Untitled"></p>
+<ol>
+<li><p>설치 완료 후 마우스 우클릭하여서 Git Bash Here 선택</p>
+<p> <img src="/images/Hexo_Blog_install/Untitled%201.png" alt="Untitled"></p>
+</li>
+<li><p>명령어 창이 뜨는데 거기서 아래 명령어를 입력하여 버전을 확인해준다</p>
+<p> <img src="/images/Hexo_Blog_install/Untitled%202.png" alt="Untitled"></p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>확인이 되면 깃허브 홈페이지로 가서 New를 클릭하여 새로운 저장소를 만들어준다.</p>
+<p>   (이름은 원하는대로 설정)</p>
+</li>
+</ol>
+<p><img src="/images/Hexo_Blog_install/Untitled%203.png" alt="Untitled"></p>
+<ol>
+<li><p>설정 후 다시 2번의 상황을 반복한 후 아래의 명령어를 입력해준다.</p>
+<p> <img src="/images/Hexo_Blog_install/Untitled%204.png" alt="Untitled"></p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init <span class="string">&quot;폴더명&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>명령어를 입력해주면 바탕화면에 해당 폴더명으로 된 폴더가 생긴것을 확인.</p>
+</li>
+<li><p>그 폴더에 마우스 우클릭하여 파이참으로 실행하기</p>
+<p> <img src="/images/Hexo_Blog_install/Untitled%205.png" alt="Untitled"></p>
+</li>
+<li><p>파이참에서 아래의 명령어를 입력하여 실행해준다</p>
+</li>
+</ol>
+<p><img src="/images/Hexo_Blog_install/Untitled%206.png" alt="Untitled"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;# myblog&quot;</span> &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/sungwiyoung/myblog.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
+
+<p>※ 주의할점은 본인이 만든 폴더명을 넣어주어야함</p>
+<ul>
+<li><p>git add “내가 올리고자 하는 파일명”  &#x2F;&#x2F; git add . → 해당 폴더에 있는 모든 파일</p>
+</li>
+<li><p>git commit -m “내가 넣고자 하는 메세지명”</p>
+</li>
+<li><p>git push 명령어를 입력해주면 업로드가 됨.</p>
+</li>
+<li><p>hexo server 를 입력하여 홈페이지가 잘 들어가는지 확인</p>
+</li>
+</ul>
+<ol>
+<li>홈페이지 연동하기</li>
+</ol>
+<ul>
+<li><p>파이참을 실행하여 config.yml 더블클릭하여 진입</p>
+</li>
+<li><p>title, url, deploy를 변경해주어야함.</p>
+</li>
+</ul>
+<p><img src="/images/Hexo_Blog_install/Untitled%207.png" alt="Untitled"></p>
+<p><img src="/images/Hexo_Blog_install/Untitled%208.png" alt="Untitled"></p>
+<p>title : 원하는 타이틀로 입력해준다</p>
+<p>url : <code>[https://sungwiyoung.github.io](https://sungwiyoung.github.io)</code> 자신의 사용자명이 들어가도록 바꿔준다</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/sungwiyoung/sungwiyoung.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>deploy에서도 repo 부분을 자신의 사용자명이 들어가도록 수정해준다.</p>
+<ol>
+<li>배포를 하기위한 준비</li>
+</ol>
+<ul>
+<li>아래의 명령어를 파이참에 입력해주어 패키지를 설치한다.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br><span class="line">$ npm install hexo-server --save</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>4번과 동일하게 새로운 저장소를 만들어주는데 9번에서 입력한 url에서 사용자명에서 io까지로 입력하여 만들어준다.</li>
+</ul>
+<p><img src="/images/Hexo_Blog_install/Untitled%209.png" alt="Untitled"></p>
+<ul>
+<li>아래의 명령어를 입력해주어 배포를 해준다.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">또는</span><br><span class="line">hexo generate deploy</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>배포를 해준 후 다시 서버를 열어서 잘 들어가는지 확인해준다.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>hexo 홈페이지에서 나오는 첫번째 명령어를 입력해준다</li>
+</ol>
+<ul>
+<li>hexo server 명령어 입력후 나오는 홈페이지에 있음</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/Hexo_Blog_install/Untitled%2010.png" alt="Untitled"></p>
+<ol>
+<li><p>입력해주면 파이참에  My-Nes-Post.md라는 파일이 생기는 것을 확인해준다.</p>
+<p> <img src="/images/Hexo_Blog_install/Untitled%2011.png" alt="Untitled"></p>
+</li>
+<li><p>테마설치(명령어만 입력해주면 자동으로 바뀜)</p>
+</li>
+</ol>
+<p>참고 페이지 : <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p><img src="/images/Hexo_Blog_install/Untitled%2012.png" alt="Untitled"></p>
+<ul>
+<li>위 홈페이지 열린 후 파이참에서 아래의 명령어를 입력해준다</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -S hexo-theme-icarus</span><br><span class="line">hexo config theme icarus</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>위 명령어를 입력후 hexo server 명령어를 입력하여 테마가 잘 바뀌었는지 확인한다.</p>
+</li>
+<li><p>오류가 날시에는 아래의 명령어를 입력해주어 다시 확인해준다.</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save bulma-stylus@0.8.0 hexo-renderer-inferno@^0.1.3</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>다시 서버를 열어보고 잘 되었는지 확인해준다.</li>
+</ul>
+<p><img src="/images/Hexo_Blog_install/Untitled%2013.png" alt="Untitled"></p>
+<p>테마가 잘 바뀌었으면 정상적으로 된것임.</p>
+<p>※ hexo clean 명령어로 청소해주기</p>
+<p>★ myblog 저장소는 자료가 날라갈것을 대비한 백업용</p>
+<p>★ ****<a target="_blank" rel="noopener" href="https://github.com/sungwiyoung/sungwiyoung.github.io">sungwiyoung.github.io</a> 저장소는 자동저장용**</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-03-17T06:25:35.000Z" title="2022. 3. 17. 오후 3:25:35">2022-03-17</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-03-17T07:18:48.573Z" title="2022. 3. 17. 오후 4:18:48">2022-03-17</time></span><span class="level-item">a few seconds read (About 22 words)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/03/17/My-New-Post/">mypost</a></h1><div class="content"><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><ul>
 <li>설치는 다음과 같습니다.</li>
 </ul>
@@ -109,7 +235,7 @@
 <ol start="2">
 <li>통계 검정</li>
 </ol>
-</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">6</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tag</p><a href="/tags"><p class="title">1</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-18T00:00:00.000Z">2022-03-18</time></p><p class="title"><a href="/2022/03/18/blog/">R에서 블로그 올리기</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T06:25:35.000Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/My-New-Post/">mypost</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T06:01:03.746Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/hello-world/">환영합니다!</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T00:00:00.000Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/blog_2/">blog_2</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-16T00:00:00.000Z">2022-03-16</time></p><p class="title"><a href="/2022/03/16/r_blog/">r_blog</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="gwiyoung&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives"><p class="title">7</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tag</p><a href="/tags"><p class="title">1</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-18T00:00:00.000Z">2022-03-18</time></p><p class="title"><a href="/2022/03/18/blog/">R에서 블로그 올리기</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-18T00:00:00.000Z">2022-03-18</time></p><p class="title"><a href="/2022/03/18/Hexo_Blog_install/">hexo_blog_install</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T06:25:35.000Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/My-New-Post/">mypost</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T06:01:03.746Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/hello-world/">환영합니다!</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-03-17T00:00:00.000Z">2022-03-17</time></p><p class="title"><a href="/2022/03/17/blog_2/">blog_2</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/03/"><span class="level-start"><span class="level-item">March 2022</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="gwiyoung&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2022 John Doe</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
